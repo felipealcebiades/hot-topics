@@ -1,0 +1,372 @@
+
+/*FONTS IMPORT---------------------------------------------------------------------*/
+
+@import url('https://fonts.googleapis.com/css?family=Josefin+Slab|Fresca');
+
+/*BODY---------------------------------------------------------------------*/
+
+body{
+  font-family: 'Fresca', Arial, sans-serif;
+  line-height: 1.4;
+  font-size: 0.75rem;
+  background: #302E33;
+}
+
+*{
+  box-sizing: border-box;
+}
+
+figure {
+  margin: 0;
+}
+
+h1,h2 {
+  font-family: 'Josefin+Slab', serif;
+  font-weight: bold;
+  margin: 10px 0;
+  text-align: center;
+}
+
+logo{
+    max-width: 100%;
+}
+
+h1 {
+  font-size: 2rem;
+}
+
+h2{
+    color:white;
+}
+
+.box {
+  max-width: 100%;
+  height: auto;
+  margin: 100px auto;
+  position: relative;
+  background:#1C1C1F;
+  text-align: justify;
+  color:white;
+  padding: 30px;
+  box-shadow: 0px 0px 0px 0px rgba(0, 0, 0, 0.5);
+}
+
+img {
+  width: 100%;
+}
+
+.box img {
+  width: 100%;
+}
+
+.box:before {
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  z-index: -1;
+  left: 0%;
+  top: 0%;
+  transform: skewX(0deg) skewY(0deg);
+  transition: 0.3s ease;
+}
+
+.box:hover:before{
+  content: " ";
+  transform: skewX(0deg) skewY(0deg);
+  box-shadow: 0px 0px 10px 2px rgba(70,130,180,0.9);
+}
+
+.content:after {
+  content:"";
+  clear: both;
+  display: block;
+}
+
+.wrapper {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.grid-box {
+  margin: 50px auto;
+  justify-content: center;
+  display: grid;
+  grid-template-columns: repeat(auto-fit,minmax(350px,1fr));
+  grid-gap: 40px;
+}
+
+
+
+/*PORTFOLIO - CARDS -------------------------------------------------------------- */
+
+.card {
+  padding: 20px;
+  height: auto;
+  background-color: white;
+  position: relative;
+  transition: 0.3s ease;
+}
+
+.card img {
+  transition: 0.3s ease;
+}
+
+.card:before {
+  content: " ";
+  background: lightgrey;
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  z-index: -1;
+  left: 0%;
+  top: 0%;
+  transform: skewX(0deg) skewY(0deg);
+  box-shadow: 0px 0px 6px 1px rgba(0, 0, 0, 0.5);
+  transition: 0.3s ease;
+}
+
+.card:hover:before{
+  content: " ";
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  z-index: -1;
+  left: 0%;
+  top: 0%;
+  transform: skewX(-0deg) skewY(-0deg);
+  box-shadow: 0px 0px 10px 2px rgba(70,130,180,0.9);
+}
+
+.card:hover {
+  transform: scale(1.2);
+  z-index: 3;
+}
+
+/*BUTTONS -------------------------------------------------------------- */
+
+.button {
+  margin: 20px 10px;
+  text-align: center;
+  align-items: center;
+  text-decoration: none;
+  color: white;
+  position: relative;
+  padding: 5px 5px;
+  background: #302E33;
+  box-sizing: border-box;
+  font-size: 2rem;
+}
+
+.button::before {
+  content: " ";
+  background: deepskyblue;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 50%;
+  left: 30%;
+  transform: translate(0%,0%) skewX(0deg) skewY(0deg);
+  z-index: -1;
+  transition: 0.2s linear;
+}
+
+.button:hover::before {
+  content: " ";
+  background: white;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%) skewX(0deg) skewY(0deg);
+  z-index: -1;
+}
+
+.button-box {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  padding: 100px 0 0 0;
+
+}
+
+/*MOREINFO -------------------------------------------------------------- */
+
+.MoreInfo {
+  text-decoration: none;
+  color: black;
+  position: relative;
+  padding:10px 12px;
+  background: white;
+  box-sizing: border-box;
+  font-size: 1rem;
+  z-index: 0;
+  margin-top: 20px;
+}
+
+.MoreInfo::before {
+  content: " ";
+  background: blue;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%) skewX(0deg) skewY(0deg);
+  z-index: -1;
+  transition: 0.3s linear;
+}
+
+.MoreInfo:hover::before {
+  content: " ";
+  background: black;
+  position: absolute;
+  width: 106%;
+  height: 106%;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%) skewX(0deg) skewY(0deg);
+  z-index: -1;
+  transition: 0.1s linear;
+}
+
+/*TITLE -------------------------------------------------------------- */
+
+.title {
+  height: 200px;
+  background: #302E33;
+  position: relative;
+  margin: 0 auto;
+  padding: 30px;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 100px;
+  width: 80%;
+  color: white;
+}
+
+.title::before {
+  content: " ";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 50%;
+  left: 50%;
+  z-index: -1;
+}
+
+/*FOOTER -------------------------------------------------------------- */
+footer {
+  display: flex;
+  align-items: center;
+  position: relative;
+  width: 80%;
+  height: 300px;
+  margin: 0 auto;
+}
+
+footer::before {
+  content: " ";
+  position: absolute;
+  z-index: -1;
+  transition: 0.3s linear;
+}
+
+h2 {
+  text-align: center;
+}
+
+.newfooter{
+    color: white;
+    text-align-last: center;
+}
+
+/*ICONS -------------------------------------------------------------- */
+
+.icons {
+  padding: 30px 0;
+  display: flex;
+  justify-content: flex-end;
+  
+}
+.icons a {
+  color:lightgray;
+  transition: 0.3s ease;
+}
+
+.icons a:hover {
+  color: deepskyblue;
+}
+
+.icons i {
+  margin-left: 40px;
+  font-size: 3rem !important;
+}
+
+
+
+
+/*MEDIA QUERIES -------------------------------------------------------------- */
+
+@media screen and (min-width:35rem) {
+  body {
+    font-size: 1rem;
+  }
+  .button-box {
+    flex-direction: row;
+    align-items: center;
+  }
+  .box {
+    max-width: 80%;
+    box-shadow: 0px 0px 0px 0px transparent;
+  }
+  .box img {
+    float: none;
+    width: 100%;
+  }
+  .box figure {
+    float: left;
+    width: 40%;
+  }
+
+  .box:before {
+    content: " ";
+    box-shadow: 0px 0px 10px 2px rgba(0, 0, 0, 0.5);
+  }
+  .tag-line::before {
+    box-shadow: 0px 0 8px 3px rgba(0, 0, 0, 0.5);
+  }
+  footer::before {
+    box-shadow: 0px 0 8px 3px rgba(0, 0, 0, 0.5);
+  }
+}
+
+@media screen and (min-width:80rem) {
+  body{
+    font-size: 1.25rem;
+  }
+  .box img {
+    float: none;
+    width: 100%;
+  }
+  .box figure {
+    float: left;
+    width: 40%;
+  }
+  .text-content {
+    width: 60%;
+    float: right;
+  }
+  .box {
+    max-width: 50%;
+  }
+
+  .tag-line::before {
+    box-shadow: 0px 0 10px 4px rgba(0, 0, 0, 0.5);
+  }
+    footer::before {
+    box-shadow: 0px 0 10px 4px rgba(0, 0, 0, 0.5);
+  }
+}
