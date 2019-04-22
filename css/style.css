@@ -185,7 +185,6 @@ img {
 .button-box {
   display: flex;
   flex-direction: column;
-  justify-content: space-evenly;
   padding: 100px 0 0 0;
 
 }
@@ -306,9 +305,6 @@ h2 {
   font-size: 3rem !important;
 }
 
-
-
-
 /*MEDIA QUERIES -------------------------------------------------------------- */
 
 @media screen and (min-width:35rem) {
@@ -352,5 +348,4 @@ h2 {
   .box {
     max-width: 50%;
   }
-
 }
